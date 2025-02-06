@@ -4,3 +4,5 @@ Feel free to use it, but thake into account thath this slight modification was d
 Have fun!
 
 CF
+
+p.s. currently trying to upload this to AUR.
