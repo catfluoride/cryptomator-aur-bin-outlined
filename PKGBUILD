@@ -19,8 +19,8 @@ optdepends=('keepassxc-cryptomator: Use KeePassXC to store vault passwords' 'ttf
 source=('org.cryptomator.Cryptomator.desktop'
         'org.cryptomator.Cryptomator.png'
         'org.cryptomator.Cryptomator.svg'
-        'org.cryptomator.Cryptomator.tray.svg'
-        'org.cryptomator.Cryptomator.tray-unlocked.svg'
+        'org.cryptomator.Cryptomator.tray-black.svg'
+        'org.cryptomator.Cryptomator.tray-unlocked-black.svg'
         'cryptomator-vault.xml')
 source_x86_64=("cryptomator-${pkgver}-${pkgrel}-x86_64.AppImage::https://github.com/cryptomator/cryptomator/releases/download/${pkgver}/cryptomator-${pkgver}-x86_64.AppImage"
                "cryptomator-${pkgver}-${pkgrel}-x86_64.AppImage.asc::https://github.com/cryptomator/cryptomator/releases/download/${pkgver}/cryptomator-${pkgver}-x86_64.AppImage.asc")
@@ -47,10 +47,10 @@ package() {
   install -Dm644 "${srcdir}/org.cryptomator.Cryptomator.desktop" "${pkgdir}/usr/share/applications/org.cryptomator.Cryptomator.desktop"
   install -Dm644 "${srcdir}/org.cryptomator.Cryptomator.png" "${pkgdir}/usr/share/icons/hicolor/scalable/apps/org.cryptomator.Cryptomator.png"
   install -Dm644 "${srcdir}/org.cryptomator.Cryptomator.svg" "${pkgdir}/usr/share/icons/hicolor/512x512/apps/org.cryptomator.Cryptomator.svg"
-  install -Dm644 "${srcdir}/org.cryptomator.Cryptomator.tray.svg" "${pkgdir}/usr/share/icons/hicolor/scalable/apps/org.cryptomator.Cryptomator.tray.svg"
-  install -Dm644 "${srcdir}/org.cryptomator.Cryptomator.tray-unlocked.svg" "${pkgdir}/usr/share/icons/hicolor/scalable/apps/org.cryptomator.Cryptomator.tray-unlocked.svg"
-  install -Dm644 "${srcdir}/org.cryptomator.Cryptomator.tray.svg" "${pkgdir}/usr/share/icons/hicolor/symbolic/apps/org.cryptomator.Cryptomator.tray-symbolic.svg"
-  install -Dm644 "${srcdir}/org.cryptomator.Cryptomator.tray-unlocked.svg" "${pkgdir}/usr/share/icons/hicolor/symbolic/apps/org.cryptomator.Cryptomator.tray-unlocked-symbolic.svg"
+  install -Dm644 "${srcdir}/org.cryptomator.Cryptomator.tray-black.svg" "${pkgdir}/usr/share/icons/hicolor/scalable/apps/org.cryptomator.Cryptomator.tray.svg"
+  install -Dm644 "${srcdir}/org.cryptomator.Cryptomator.tray-unlocked-black.svg" "${pkgdir}/usr/share/icons/hicolor/scalable/apps/org.cryptomator.Cryptomator.tray-unlocked.svg"
+  install -Dm644 "${srcdir}/org.cryptomator.Cryptomator.tray-black.svg" "${pkgdir}/usr/share/icons/hicolor/symbolic/apps/org.cryptomator.Cryptomator.tray-symbolic.svg"
+  install -Dm644 "${srcdir}/org.cryptomator.Cryptomator.tray-unlocked-black.svg" "${pkgdir}/usr/share/icons/hicolor/symbolic/apps/org.cryptomator.Cryptomator.tray-unlocked-symbolic.svg"
 
   mkdir -p "${pkgdir}/usr/bin/"
   ln -s "/opt/${pkgname}/cryptomator-${pkgver}-${CARCH}.AppImage" "${pkgdir}/usr/bin/cryptomator"
